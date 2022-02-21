@@ -142,6 +142,8 @@ def robot():
 		rv = 5
 	elif (values[8] == 'X' and values[5] == 'X' and values[2]== ' '):
 		rv = 2
+	elif current_input in [1,3,7,9] and values[4] == " ":
+		rv = 4
 	else:
 		rv = random.choice(valuesI)	
 		
@@ -241,7 +243,7 @@ def gameProcessPlayer1(ch='1'):
 							if (pla1inp - 1) in player1:
 									by = 'you'
 							else:
-									by = 'player2'
+									by = 'Robot'
 							print(f'Sorry, place is already reserved by {by}!')
 							pla1inp = int(input(f'Player{ch} \'X\': '))
 			elif ttp > 1 or ttpBey > 1:
